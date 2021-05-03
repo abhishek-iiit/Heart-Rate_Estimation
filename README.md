@@ -5,6 +5,7 @@
 
 A person’s heart rate can be indicative of their health, fit-ness, activity level, stress, and much more. Cardiac pulse is  typically  measured in clinical settings using electrocardiogram(ECG), which require patients to wear chest straps with adhesive gel patches that are abrasive and become uncomfortable for user.Heart rate can also be monitored using pulse oxiometry sensor that may be worn in the fingerprint or earlobe. These sensor are not convienent for long term wear and pressure can be uncomfortable over time. So, Non-contact heart rate measurement through a simple webcam or phone camera would aid telemedicine and allow  the average person to track their heart rate without purchasing special equipment.
 
+![Screenshot from 2021-05-03 15-23-54](https://user-images.githubusercontent.com/69477761/116866622-5aaf3300-ac29-11eb-94c1-c56f9e453d6a.png)
 
 Here,I have used various python libraries and modules for :
 - Performing the face detection and tracking using OpenCV or any other computer vision library
@@ -13,6 +14,7 @@ Here,I have used various python libraries and modules for :
 - Implementing signal processing to remove the motion noise to get consistent results
 - Calculating heart rate variability (HRV) from the video.
 
+![Screenshot from 2021-05-03 15-33-45](https://user-images.githubusercontent.com/69477761/116866715-86321d80-ac29-11eb-8ba4-68df2423d7a3.png)
 
 ## References:
 - [Efficient Real-Time Camera Based Estimation of Heart Rate and Its Variability](https://openaccess.thecvf.com/content_ICCVW_2019/papers/CVPM/Gudi_Efficient_Real-Time_Camera_Based_Estimation_of_Heart_Rate_and_Its_ICCVW_2019_paper.pdf)
