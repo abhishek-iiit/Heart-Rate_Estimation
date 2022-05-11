@@ -1,38 +1,96 @@
 # Heart Rate Estimator
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-A person’s heart rate can be indicative of their health, fit-ness, activity level, stress, and much more. Cardiac pulse is  typically  measured in clinical settings using electrocardiogram(ECG), which require patients to wear chest straps with adhesive gel patches that are abrasive and become uncomfortable for user.Heart rate can also be monitored using pulse oxiometry sensor that may be worn in the fingerprint or earlobe. These sensor are not convienent for long term wear and pressure can be uncomfortable over time. So, Non-contact heart rate measurement through a simple webcam or phone camera would aid telemedicine and allow  the average person to track their heart rate without purchasing special equipment.
+Made in response to Covid-19 virus, this can be beneficial to non-contact where heart rate can be measured through a simple webcam or phone camera. This further allow the person to track their heart rate without purchasing special equipments.
 
-![Screenshot from 2021-05-03 15-23-54](https://user-images.githubusercontent.com/69477761/116866622-5aaf3300-ac29-11eb-94c1-c56f9e453d6a.png)
+![Screenshot from 2021-05-03 15-23-54](https://user-images.githubusercontent.com/69477761/167782395-d2793d72-47bb-4727-bde9-2394d98d36cc.png)
 
-Here,I have used various python libraries and modules for :
-- Performing the face detection and tracking using OpenCV or any other computer vision library
-- Selecting the forehead as Region of Interest (ROI) and displaying adjusted boundary box
-- Calculating heart rate from the signals from ROI under both light conditions
-- Implementing signal processing to remove the motion noise to get consistent results
-- Calculating heart rate variability (HRV) from the video.
+## Table of Content
+- [Libraries Used](#libraries)
+- [Advantages](#advantages)
+- [Usage](#usage)
+- [Flowchart](#Flowchart)
+- [References](#references)
+- [Bug Reporting](#bug-reporting)
+- [Feature Request](#feature-request)
+- [License](#license)
 
-![Screenshot from 2021-05-03 15-33-45](https://user-images.githubusercontent.com/69477761/116866715-86321d80-ac29-11eb-8ba4-68df2423d7a3.png)
+![How it is made](https://user-images.githubusercontent.com/69477761/167783906-c10f9608-58f0-4a56-aecb-5dafcd2bf8b4.png)
 
-## References:
-- [Efficient Real-Time Camera Based Estimation of Heart Rate and Its Variability](https://openaccess.thecvf.com/content_ICCVW_2019/papers/CVPM/Gudi_Efficient_Real-Time_Camera_Based_Estimation_of_Heart_Rate_and_Its_ICCVW_2019_paper.pdf)
-- [Emotion & Heartbeat Detection using Image Processing](https://www.ijser.org/researchpaper/Emotion-Heartbeat-Detection-using-Image-Processing.pdf)
+<a id="libraries"></a>
 
-## Some Previous Blogs:
-<!-- BLOG-POST-LIST:START -->
-- [How to get started with Machine learning?](https://abhishek-iiit.hashnode.dev/how-to-get-started-with-machine-learning)
-- [Basic Introduction to Scikit Learn](https://medium.com/analytics-vidhya/basic-introduction-to-scikit-learn-fa610f14e40d)
-- [Basic tools to learn in Data Analysis with Python](https://medium.com/analytics-vidhya/basic-tools-to-learn-in-data-analysis-with-python-5b9b4a7a1b61)
-- [Basic Introduction to Numpy](https://medium.com/analytics-vidhya/basic-introduction-to-numpy-8308c2778e43)
-- [Basic Introduction to Pandas: Pandas Series(Part 1)](https://medium.com/analytics-vidhya/basic-introduction-to-pandas-pandas-series-part-1-ee08073b109)
-- [Basic Introduction to Pandas: Pandas Series(Part 2)](https://medium.com/analytics-vidhya/basic-introduction-to-pandas-pandas-series-part-2-492c887aeb94)
-<!-- BLOG-POST-LIST:END -->
+## 📚 Libraries Used
+1. [Python](https://www.python.org/downloads/) installed (version >= 3.6)
+2. [OpenCV](https://pypi.org/project/opencv-python/) installed for face recognition
+```sh
+pip install opencv-python
+```
+3. [NumPy](https://numpy.org/install/) installed to perform the matrix task
+```sh
+pip install numpy
+```
+4. [Pandas](https://docs.python.org/3/library/tkinter.html) installed to store student information in local database
+```sh
+pip install pandas
+```
+5. [TKinter](https://docs.python.org/3/library/tkinter.html) installed to make GUI for better interaction with the program
+```sh
+pip install tk
+```
+6. [PIL](https://pypi.org/project/Pillow/) installed to create and save images
+```sh
+pip install Pillow
+```
 
-<h1 align=center> Made with ❤️ by </h1>
-<p align="center">
-  <a href="https://github.com/abhishek-iiit"><img src="https://user-images.githubusercontent.com/69477761/111753834-4ef7ef00-88bd-11eb-856c-afe7d58115d5.png" width=150px height=150px /></a> 
-    
-<p align="center">
-  <img src="https://img.shields.io/badge/abhishekiiit%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>  <img src="https://img.shields.io/badge/abhishekiiit%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"/> <img src="https://img.shields.io/badge/manneabhi%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/> <img src="https://img.shields.io/badge/abhishekiiit%20-%24E4405F.svg?&style=for-the-badge&logo=Medium&logoColor=white"/>
+![Screenshot](https://user-images.githubusercontent.com/69477761/116866715-86321d80-ac29-11eb-8ba4-68df2423d7a3.png)
+
+<a id="advantages"></a>
+
+## 💫 Advantages
+
+1. Zero dependencies and simple to operate with good accuracy
+2. Contactless measurement of Heart rate can help reduce the spread of viruses
+3. No need to purchase costly special equipment for the detection.
+4. Network connectivity is not required which result to no network related problems
+
+<a id="usage"></a>
+
+## 🎩 Usage
+
+1. Run the below command in the terminal to open the interface:
+```sh
+python3 HRE.py
+```
+2. Locate the recorded video to the Upload section, and you are good to go.
+</br></br><b>Note:</b> For better accuracy, record your calculation atleast 3 times and take the average of your reading.
+
+<a id="Flowchart"></a>
+
+## ⚔️ Flowchart
+
+![Flowchart](https://user-images.githubusercontent.com/69477761/167784189-d35af9a4-4cc0-45b8-85d0-076e8fe43ae4.png)
+
+<a id="references"></a>
+
+## 🔬 References
+
+* [Efficient Real-Time Camera Based Estimation of Heart Rate and Its Variability](https://openaccess.thecvf.com/content_ICCVW_2019/papers/CVPM/Gudi_Efficient_Real-Time_Camera_Based_Estimation_of_Heart_Rate_and_Its_ICCVW_2019_paper.pdf)
+* [Emotion & Heartbeat Detection using Image Processing](https://www.ijser.org/researchpaper/Emotion-Heartbeat-Detection-using-Image-Processing.pdf)
+
+<a id="bug-reporting"></a>
+
+## 🐛 Bug Reporting
+
+Feel free to [open an issue](https://github.com/abhishek-iiit/Heart-Rate_Estimation/issues) on GitHub if you find any bug.
+
+<a id="feature-request"></a>
+
+## ⭐ Feature Request
+
+- Feel free to [Open an issue](https://github.com/abhishek-iiit/Heart-Rate_Estimation/issues) on GitHub to request any additional features you might need for your use case.
+- Connect with me on [LinkedIn](https://www.linkedin.com/in/abhishek-iiit/). I'd love ❤️️ to hear where you are using this system.
+
+<a id="license"></a>
+
+## 📜 License
+
+This software is open source, licensed under the [MIT License](https://github.com/abhishek-iiit/Heart-Rate_Estimation/blob/main/LICENSE).
